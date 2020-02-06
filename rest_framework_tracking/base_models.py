@@ -13,6 +13,7 @@ class BaseAPIRequestLog(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
+        db_constraint=False
     )
     requested_at = models.DateTimeField(db_index=True)
     response_ms = models.PositiveIntegerField(default=0)
